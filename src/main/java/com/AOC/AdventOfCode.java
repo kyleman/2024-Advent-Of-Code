@@ -12,7 +12,6 @@ import java.util.Scanner;
 
 public class AdventOfCode {
 	public static void main(String[] args) {
-		/*
 		List<Integer> left = new ArrayList<>();
 		List<Integer> right = new ArrayList<>();
 		
@@ -36,29 +35,9 @@ public class AdventOfCode {
 		
 		Collections.sort(left);
 		Collections.sort(right);
-		*/
 		
-			List<Integer> leftList = new ArrayList<>();
-		List<Integer> rightList = new ArrayList<>();
-		
-		leftList.add(3);
-		rightList.add(4);
-		leftList.add(4);
-		rightList.add(3);
-		leftList.add(2);
-		rightList.add(5);
-		leftList.add(1);
-		rightList.add(3);
-		leftList.add(3);
-		rightList.add(9);
-		leftList.add(3);
-		rightList.add(3);
-		
-		Collections.sort(leftList);
-		Collections.sort(rightList);
-		
-		System.out.println("similarity score is: " + calculateSimilarityScore(leftList, rightList));
-				System.out.println("similarity score is: " + calculateSimilarityScore(rightList, leftList));
+		System.out.println("similarity score is: " + calculateSimilarityScore(left, right));
+				System.out.println("similarity score is: " + calculateSimilarityScore(right, left));
 	}
 	
 
