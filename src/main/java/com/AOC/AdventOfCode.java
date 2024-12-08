@@ -57,5 +57,33 @@ public class AdventOfCode {
 		Collections.sort(leftList);
 		Collections.sort(rightList);
 		
+		System.out.println("similarity score is: " + calculateSimilarityScore(leftList, rightList));
+				System.out.println("similarity score is: " + calculateSimilarityScore(rightList, leftList));
 	}
+	
+
+	/**
+	 * calculates the left list's similarity score compared to the right list
+	 * 
+	 * @param left the left list to calculate the similarity score of
+	 * @param right the the right list to use for searching for the elements of the left list
+	 * @return the similarity score
+	 */
+	public static int calculateSimilarityScore(List<Integer> left, List<Integer> right) {
+		int similarityScore = 0;
+		
+		for (Integer l : left) {
+			int count = 0;
+			for (Integer r : right) {
+				if (l.equals(r)) {
+					count++;
+				}
+			}
+			
+			similarityScore += l * count;
+		}
+		
+		return similarityScore;
+	}
+	
 }
