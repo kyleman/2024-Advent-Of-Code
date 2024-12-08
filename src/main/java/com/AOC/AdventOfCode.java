@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 public class AdventOfCode {
 	public static void main(String[] args) {
+		/*
 		List<Integer> left = new ArrayList<>();
 		List<Integer> right = new ArrayList<>();
 		
@@ -32,15 +33,29 @@ public class AdventOfCode {
 			System.out.println("File not found: " + fnfe);
 		}
 		
-		int sum = 0;
 		
 		Collections.sort(left);
 		Collections.sort(right);
+		*/
 		
-		for (int x = 0; x < left.size(); x++) {
-			sum += Math.abs(left.get(x) - right.get(x));
-		}
+			List<Integer> leftList = new ArrayList<>();
+		List<Integer> rightList = new ArrayList<>();
 		
-		System.out.println(sum);
+		leftList.add(3);
+		rightList.add(4);
+		leftList.add(4);
+		rightList.add(3);
+		leftList.add(2);
+		rightList.add(5);
+		leftList.add(1);
+		rightList.add(3);
+		leftList.add(3);
+		rightList.add(9);
+		leftList.add(3);
+		rightList.add(3);
+		
+		Collections.sort(leftList);
+		Collections.sort(rightList);
+		
 	}
 }
